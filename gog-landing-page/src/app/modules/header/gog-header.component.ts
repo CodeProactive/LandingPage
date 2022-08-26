@@ -5,12 +5,23 @@ import { Component } from '@angular/core';
   templateUrl: './gog-header.component.html',
   styleUrls: ['./gog-header.component.scss']
 })
+
 export class GogHeaderComponent {
+
   public itemsInCart: number = 0;
+  public isCartOpen: boolean = false;
 
-  constructor(){}
-
-  public toggleCartVisibility(): void {
-    this.itemsInCart++
+  constructor() {
   }
+
+  public toggleCart(): void {
+    this.isCartOpen = !this.isCartOpen
+  }
+
+  public closeMenuCart(): void {
+    // setTimeout(() => {
+    //   this.toggleCart()
+    // }, 1000);
+  }
+
 }

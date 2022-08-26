@@ -1,0 +1,53 @@
+@import 'src/global_styles/variables';
+
+$cart-width: 370px;
+
+.gog-menu-cart {
+  width: $cart-width;
+  background-color: $gog-color-white;
+  margin-left: -(calc($cart-width - $header-width + 1px));
+  border-left: $gog-border;
+  border-right: $gog-border;
+  border-bottom: $gog-border;
+  z-index: 20;
+
+  &_empty {
+    width: 500px;
+    height: 350px;
+    margin-left: -(calc(500px - $header-width + 1px));
+  }
+
+  &__container {
+    padding: 10px 10px 0 10px;
+  }
+
+  &__empty{
+    &-cart {
+      margin: 0 auto;
+    }
+
+    &-header {
+      margin-top: 100px;
+      font-size: 16px;
+      color: $gog-font-green-color;
+      font-weight: $gog-font-weight-bold;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    &-border {
+      display: block;
+      margin: auto;
+      width: 180px;
+      height: 1px;
+      border: none;
+      background: $gog-border-color-light;
+    }
+
+    &-description {
+      text-align: center;
+      color: $gog-font-grey-color;
+      font-size: 14px;
+    }
+  }
+}

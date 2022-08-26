@@ -1,4 +1,5 @@
-<div class="gog-header">
+<div class="gog-header"
+     (mouseleave)="closeMenuCart()">
   <div class="gog-header__menu-wrapper">
     <div class="gog-header__logo-container">
       <div class="gog-header__logo">
@@ -10,18 +11,19 @@
       <div class="gog-header__cart">
         <a class="gog-header__cart-button"
            target="_self"
-           (click)="toggleCartVisibility()">
+           (click)="toggleCart()">
           <div class="gog-header__cart-icon">
-              <img alt="Cart icon"
-                   src="assets/icons/icon_cart.svg">
-            <span *ngIf="itemsInCart > 0"
-                  class="gog-header__cart-counter">
+            <img alt="Cart icon"
+                 src="assets/icons/icon_cart.svg">
+            <span class="gog-header__cart-counter">
               {{ itemsInCart }}
             </span>
           </div>
         </a>
-        <div class="gog-header__cart-items">
-          cart items container
+        <div *ngIf="isCartOpen"
+             class="gog-header__cart-menu">
+          <gog-menu-cart>
+          </gog-menu-cart>
         </div>
       </div>
     </div>

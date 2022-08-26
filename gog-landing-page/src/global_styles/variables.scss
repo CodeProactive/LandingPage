@@ -4,12 +4,27 @@ $gog-background-color: #CDCDCD;
 $gog-color-white: #FFFFFF;
 $gog-nav-background-color: #DEDEDE;
 $gog-border-color: #B8B8B8;
+$gog-border-color-light: #e5e5e5;
 $gog-font-color: #262626;
+$gog-font-green-color: #569a3e;
+$gog-font-black-color: #1A1A1A;
+$gog-font-grey-color: #808080;
+$button-gradient-a: #B65AE2;
+$button-gradient-b: #7A3DC6;
 
 //dimensions
 
 $gog-nav-width: 1060px;
+$header-height: 59px;
+$header-width: 58px;
 
-// fonts
-$gog-font-weight: 600;
+//font weight
+
+$gog-font-semi-bold: 400;
+$gog-font-weight-bold: 600;
+
+//predefined
+
+$gog-border: 1px solid $gog-border-color;
+$gog-light: 1px solid $gog-border-color;
 

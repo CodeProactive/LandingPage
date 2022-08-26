@@ -1,0 +1,20 @@
+<div class="gog-menu-cart"
+     [ngClass]="{'gog-menu-cart_empty' : itemsInCart === 0}">
+  <div class="gog-menu-cart__container">
+    <ng-container *ngIf="itemsInCart > 0; else emptyCart">
+      <gog-cart-summary>
+      </gog-cart-summary>
+    </ng-container>
+    <ng-template #emptyCart>
+      <div class="gog-menu-cart__empty-cart">
+        <h2 class="gog-menu-cart__empty-header">
+          Twój koszyk jest pusty
+        </h2>
+        <hr class="gog-menu-cart__empty-border">
+        <div class="gog-menu-cart__empty-description">
+          Odkryj niezwykle gri i oferty.
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>
