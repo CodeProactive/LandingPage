@@ -1,0 +1,33 @@
+<div class="gog-header">
+  <div class="gog-header__menu-wrapper">
+    <div class="gog-header__logo-container">
+      <div class="gog-header__logo">
+        <img alt="GOG logo"
+             src="assets/images/logo.png">
+      </div>
+    </div>
+    <div class="gog-header__cart-container">
+      <div class="gog-header__cart">
+        <a class="gog-header__cart-button"
+           target="_self"
+           (click)="toggleCartVisibility()">
+          <div class="gog-header__cart-icon">
+              <img alt="Cart icon"
+                   src="assets/icons/icon_cart.svg">
+            <span *ngIf="itemsInCart > 0"
+                  class="gog-header__cart-counter">
+              {{ itemsInCart }}
+            </span>
+          </div>
+        </a>
+        <div class="gog-header__cart-items">
+          cart items container
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<svg>
+  <use href="/assets/icons/icon_cart.svg"></use>
+</svg>
