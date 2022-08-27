@@ -1,12 +1,13 @@
 <div class="gog-cart-summary">
   <div class="gog-cart-summary__container">
     <div class="gog-cart-summary__no-of-items">
-      2 items in cart
+      {{gogCartService.numbersOfProductsInCart()}} items in cart
     </div>
     <div class="gog-cart-summary__total">
-      $15,95
+      {{ gogCartService.totalAmountDue()}}
     </div>
-    <div class="gog-cart-summary__button">
+    <div class="gog-cart-summary__button"
+         (click)="gogCartService.clearCart()">
       CLEAR CART
     </div>
   </div>

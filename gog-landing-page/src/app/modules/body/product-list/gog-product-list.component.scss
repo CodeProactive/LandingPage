@@ -1,0 +1,12 @@
+@import 'src/global_styles/variables';
+
+.gog-product-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  &__item {
+    background-color: $gog-product-background-color;
+    height: 196px;
+  }
+}

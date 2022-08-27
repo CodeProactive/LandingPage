@@ -11,12 +11,12 @@
       <div class="gog-header__cart">
         <a class="gog-header__cart-button"
            target="_self"
-           (click)="toggleCart()">
+           (click)="toggleCartVisibility()">
           <div class="gog-header__cart-icon">
             <img alt="Cart icon"
                  src="assets/icons/icon_cart.svg">
             <span class="gog-header__cart-counter">
-              {{ itemsInCart }}
+              {{ gogCartService.numbersOfProductsInCart() }}
             </span>
           </div>
         </a>
@@ -29,7 +29,3 @@
     </div>
   </div>
 </div>
-
-<svg>
-  <use href="/assets/icons/icon_cart.svg"></use>
-</svg>

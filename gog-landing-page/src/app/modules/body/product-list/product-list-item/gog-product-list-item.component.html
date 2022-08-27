@@ -1,0 +1,15 @@
+<div class="gog-product-list-item">
+  <div class="gog-product-list-item__image">
+    <img alt="Product Image"
+         src={{salesProduct.imgUrl}}>
+  </div>
+  <div class="gog-product-list-item__title">
+    {{ salesProduct.productName }}
+  </div>
+  <div class="gog-product-list-item__price">
+    <button type="button"
+            (click)="gogCartService.addProductToCart(salesProduct)">
+      <span *ngIf="salesProduct.currency === CurrenciesEnum.USD">$</span>{{ salesProduct.productPrice }}
+    </button>
+  </div>
+</div>

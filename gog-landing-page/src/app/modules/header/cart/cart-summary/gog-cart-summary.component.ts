@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {GogCartService} from "../gog-cart.service";
 
 @Component({
   selector: 'gog-cart-summary',
@@ -7,8 +8,9 @@ import { Component } from '@angular/core';
 })
 export class GogCartSummaryComponent {
 
-  constructor() {
+  constructor(
+    public gogCartService: GogCartService,
+  ) {
 
   }
-
 }

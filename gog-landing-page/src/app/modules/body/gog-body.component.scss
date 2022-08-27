@@ -1,0 +1,18 @@
+@import 'src/global_styles/variables';
+
+.gog-body {
+
+  &__wrapper {
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    height: 67px;
+    line-height: 80px;
+    text-transform: uppercase;
+    font-weight: $gog-font-weight-bold;
+    font-size: 14px;
+  }
+
+}

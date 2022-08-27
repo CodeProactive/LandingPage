@@ -1,0 +1,47 @@
+@import 'src/global_styles/variables';
+
+
+.gog-cart-item {
+  font-size: 13px;
+  height: 69px;
+  display: flex;
+  font-weight: $gog-font-weight-bold;
+
+  &__product-image {
+    width: 100px;
+    margin-right: 5px;
+
+    img {
+      height: 60px;
+      width: 100px;;
+    }
+  }
+
+  &__product-title {
+    grid-area: product-title;
+    width: 190px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    transition: transform 250ms;
+
+    &_hover {
+      transform: translateY(-10px);
+    }
+  }
+
+  &__remove-button {
+    position: relative;
+    bottom: 35px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: $gog-font-weight-semi-bold;
+    text-decoration: underline;
+  }
+
+  &__product-price {
+    grid-area: product-price;
+    margin-left: auto;
+  }
+}

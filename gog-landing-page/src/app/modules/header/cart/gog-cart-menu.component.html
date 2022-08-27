@@ -1,9 +1,13 @@
 <div class="gog-menu-cart"
-     [ngClass]="{'gog-menu-cart_empty' : itemsInCart === 0}">
+     [ngClass]="{'gog-menu-cart_empty' : itemsInCart() === 0}">
   <div class="gog-menu-cart__container">
-    <ng-container *ngIf="itemsInCart > 0; else emptyCart">
+    <ng-container *ngIf="itemsInCart() > 0; else emptyCart">
       <gog-cart-summary>
       </gog-cart-summary>
+      <div *ngFor="let cartItem of gogCartService.productsInCart">
+        <gog-cart-item [cartItem]="cartItem">
+        </gog-cart-item>
+      </div>
     </ng-container>
     <ng-template #emptyCart>
       <div class="gog-menu-cart__empty-cart">
