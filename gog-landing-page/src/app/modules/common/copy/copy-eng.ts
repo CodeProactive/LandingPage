@@ -11,7 +11,7 @@ export const CopyEng = {
   BODY: {
     HEADER: 'Game of the week',
     PRODUCTS_SECTION: {
-      PRODUCT_IN_CART: 'In cart'
+      PRODUCT_IN_CART: 'IN CART'
     }
   },
   COMMON: {

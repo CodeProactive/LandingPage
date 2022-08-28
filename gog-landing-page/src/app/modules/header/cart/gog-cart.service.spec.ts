@@ -5,7 +5,7 @@ import { CurrenciesEnum } from "../../common/models/currencies.enum";
 
 describe('GogCartService', () => {
 
-  const productMock: ProductModel =   {
+  const productMock: ProductModel = {
       productId: 1,
       productName: "oddworld: stranger's wrath",
       productPrice: 9.99,
@@ -15,6 +15,27 @@ describe('GogCartService', () => {
       isInCart: false,
       imgUrl: "assets/images/oddworlds.png"
     };
+
+  const productMock2: Array<ProductModel> =   [
+    {
+    productId: 1,
+    productName: "oddworld: stranger's wrath",
+    productPrice: 9.99,
+    currency: CurrenciesEnum.USD,
+    discount: "-50%",
+    isOwned: false,
+    isInCart: false,
+    imgUrl: "assets/images/oddworlds.png"
+  },{
+    productId: 1,
+    productName: "oddworld: stranger's wrath",
+    productPrice: 9.99,
+    currency: CurrenciesEnum.USD,
+    discount: "-50%",
+    isOwned: false,
+    isInCart: false,
+    imgUrl: "assets/images/oddworlds.png"
+  }];
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -83,6 +104,14 @@ describe('GogCartService', () => {
     expect(testResult).toBe(true);
   });
 
-  // remove item from cart
+  it('should delete single item of give itemID upon method call', () => {
+    const service =TestBed.inject(GogCartService)
+    spyOn(service,'removeItemFromCart').and.callThrough();
+    service.productsInCart = productMock2;
+    expect(service.productsInCart.length).toBe(2);
+    service.removeItemFromCart(productMock.productId)
+    expect(service.productsInCart.length).toBe(1);
+    expect(service.productsInCart).toEqual([productMock]);
+  });
 
 });

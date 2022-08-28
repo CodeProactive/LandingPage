@@ -23,14 +23,13 @@ export class GogCartService {
     return Number(result.toFixed(2));
   }
 
-  public removeItemFromCart(productName: string): void {
-    this.productsInCart = this.productsInCart.filter(function( obj ) {
-      return obj.productName !== productName;
-    });
+  public removeItemFromCart(productId: number): void {
+    const array = this.productsInCart.findIndex(p => p.productId === productId);
+    this.productsInCart.splice(array,1);
   }
 
   public isProductInCart(productId: number): boolean {
-   return this.productsInCart.some(product => product.productId === productId) ? true : false;
+   return this.productsInCart.some(product => product.productId === productId);
   }
 
 }

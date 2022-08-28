@@ -11,7 +11,7 @@
     <div class="gog-cart-item__remove-button"
          *ngIf="isRemoveButtonVisible === true">
       <a target="_self"
-         (click)="gogCartService.removeItemFromCart(cartItem.productName)">
+         (click)="gogCartService.removeItemFromCart(cartItem.productId)">
         {{COPY_ENG.HEADER.CART.REMOVE_ITEM}}
       </a>
     </div>

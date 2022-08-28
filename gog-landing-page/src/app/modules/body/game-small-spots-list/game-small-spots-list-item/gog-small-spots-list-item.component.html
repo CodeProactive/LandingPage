@@ -6,11 +6,13 @@
   <div class="gog-product-list-item__title">
     {{ salesProduct.productName }}
   </div>
-  <div class="gog-product-list-item__price">
+  <div class="gog-product-list-item__price"
+       [ngClass]="{'gog-product-list-item__price_in-cart': gogCartService.isProductInCart(salesProduct.productId)}">
     <button type="button"
             (click)="gogCartService.addProductToCart(salesProduct)">
       <ng-container *ngIf="!gogCartService.isProductInCart(salesProduct.productId); else productInCart">
-        <span *ngIf="salesProduct.currency === CurrenciesEnum.USD">{{COPY_ENG.COMMON.CURRENCIES.USD}}</span>{{ salesProduct.productPrice }}
+        <span
+          *ngIf="salesProduct.currency === CurrenciesEnum.USD">{{COPY_ENG.COMMON.CURRENCIES.USD}}</span>{{ salesProduct.productPrice }}
       </ng-container>
       <ng-template #productInCart>
         <span>
@@ -21,7 +23,7 @@
   </div>
   <div *ngIf="salesProduct.discount && !gogCartService.isProductInCart(salesProduct.productId)"
        class="gog-product-list-item__price gog-product-list-item__price_discount">
-        {{salesProduct.discount}}
+    {{salesProduct.discount}}
   </div>
 
 </div>
