@@ -4,7 +4,6 @@ export class GogCartService {
   public productsInCart: Array<ProductModel> = [];
 
   constructor() {
-
   }
 
   public addProductToCart(product: ProductModel): void {

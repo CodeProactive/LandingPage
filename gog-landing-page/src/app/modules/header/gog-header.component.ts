@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {GogCartService} from "./cart/gog-cart.service";
+import { GogCartService } from "./cart/gog-cart.service";
 
 @Component({
   selector: 'gog-header',

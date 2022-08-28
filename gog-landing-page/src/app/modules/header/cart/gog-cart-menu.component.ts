@@ -16,8 +16,4 @@ export class GogCartMenuComponent {
 
   }
 
-  public itemsInCart(): number {
-    return this.gogCartService.numbersOfProductsInCart()
-  }
-
 }

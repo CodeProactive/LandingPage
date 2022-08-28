@@ -1,27 +1,25 @@
 import { TestBed } from '@angular/core/testing';
-import { GogCartSummaryComponent } from "./gog-cart-summary.component";
-import { GogCartService } from "../gog-cart.service";
+import { GogBodyComponent } from "./gog-body.component";
 
-describe('GogCartSummaryComponent', () => {
+describe('GogBodyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
       ],
       declarations: [
-        GogCartSummaryComponent
+        GogBodyComponent
       ],
       providers: [
-        GogCartService
       ]
     }).compileComponents();
   });
 
-
   it('should create the component', () => {
-    const fixture = TestBed.createComponent(GogCartSummaryComponent);
+    const fixture = TestBed.createComponent(GogBodyComponent);
     const component = fixture.componentInstance;
     expect(component).toBeTruthy();
   });
+
 
 });
