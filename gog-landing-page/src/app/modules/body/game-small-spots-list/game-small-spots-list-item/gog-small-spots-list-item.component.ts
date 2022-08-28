@@ -5,12 +5,12 @@ import { GogCartService } from "../../../header/cart/gog-cart.service";
 import { CopyEng } from "../../../common/copy/copy-eng";
 
 @Component({
-  selector: 'gog-product-list-item',
-  templateUrl: './gog-product-list-item.component.html',
-  styleUrls: ['./gog-product-list-item.component.scss']
+  selector: 'gog-small-spots-list-item',
+  templateUrl: './gog-small-spots-list-item.component.html',
+  styleUrls: ['./gog-small-spots-list-item.component.scss']
 })
 
-export class GogProductListItemComponent {
+export class GogSmallSpotsListItemComponent {
   @Input() public salesProduct: ProductModel;
   public CurrenciesEnum: typeof CurrenciesEnum = CurrenciesEnum;
   public COPY_ENG: typeof CopyEng = CopyEng;

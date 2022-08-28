@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { ProductModel } from "../common/models/product.model";
+import { Component } from '@angular/core';
+import { CopyEng } from "../common/copy/copy-eng";
+import { SalesProductsListMock } from "../mock/salesProductListMock";
 
 @Component({
   selector: 'gog-body',
@@ -8,10 +9,10 @@ import { ProductModel } from "../common/models/product.model";
 })
 
 export class GogBodyComponent {
-    @Input() public salesProductsList: Array<ProductModel>;
+  public COPY_ENG: typeof CopyEng = CopyEng;
+  public salesProductsList: typeof SalesProductsListMock = SalesProductsListMock;
 
   constructor() {
-
   }
 
 }

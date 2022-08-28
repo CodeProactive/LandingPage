@@ -1,15 +1,11 @@
 <div class="gog-body">
   <div class="gog-body__wrapper">
     <div class="gog-body__title">
-      Game of the Week
+      {{COPY_ENG.BODY.HEADER}}
     </div>
-    <div class="gog-body__carousel">
-      <gog-carousel>
-      </gog-carousel>
-    </div>
-    <div class="gog-body__product-list">
-      <gog-product-list [salesProductsList]="salesProductsList">
-      </gog-product-list>
-    </div>
+      <gog-game-spot>
+      </gog-game-spot>
+      <gog-small-spots-list [salesProductsList]="salesProductsList">
+      </gog-small-spots-list>
   </div>
 </div>

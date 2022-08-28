@@ -8,12 +8,12 @@ import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import {GogCartSummaryComponent} from "./modules/header/cart/cart-summary/gog-cart-summary.component";
 import {GogCartItemComponent} from "./modules/header/cart/cart-item/gog-cart-item.component";
 import {GogBodyComponent} from "./modules/body/gog-body.component";
-import {GogProductListComponent} from "./modules/body/product-list/gog-product-list.component";
+import {GogSmallSpotsListComponent} from "./modules/body/game-small-spots-list/gog-small-spots-list.component";
 import {
-  GogProductListItemComponent
-} from "./modules/body/product-list/product-list-item/gog-product-list-item.component";
+  GogSmallSpotsListItemComponent
+} from "./modules/body/game-small-spots-list/game-small-spots-list-item/gog-small-spots-list-item.component";
 import {GogCartService} from "./modules/header/cart/gog-cart.service";
-import {GogCarouselComponent} from "./modules/body/carousel/gog-carousel.component";
+import {GogGameSpotComponent} from "./modules/body/game-spot/gog-game-spot.component";
 
 @NgModule({
   declarations: [
@@ -23,9 +23,9 @@ import {GogCarouselComponent} from "./modules/body/carousel/gog-carousel.compone
     GogCartSummaryComponent,
     GogCartItemComponent,
     GogBodyComponent,
-    GogCarouselComponent,
-    GogProductListComponent,
-    GogProductListItemComponent
+    GogGameSpotComponent,
+    GogSmallSpotsListComponent,
+    GogSmallSpotsListItemComponent
   ],
   imports: [
     BrowserModule,

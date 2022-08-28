@@ -19,4 +19,9 @@
       </ng-template>
     </button>
   </div>
+  <div *ngIf="salesProduct.discount && !gogCartService.isProductInCart(salesProduct.productId)"
+       class="gog-product-list-item__price gog-product-list-item__price_discount">
+        {{salesProduct.discount}}
+  </div>
+
 </div>
