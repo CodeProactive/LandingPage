@@ -24,12 +24,4 @@ describe('GogHeaderComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should toggle cart visibility', () => {
-    const fixture = TestBed.createComponent(GogHeaderComponent);
-    const component = fixture.componentInstance;
-    component.isCartOpen = true;
-    component.toggleCartVisibility();
-    expect(component.isCartOpen).toBeFalse();
-  });
-
 });

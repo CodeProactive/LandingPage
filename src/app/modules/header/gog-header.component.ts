@@ -12,17 +12,6 @@ export class GogHeaderComponent {
 
   constructor(
     public gogCartService: GogCartService,
-  ) {
-  }
-
-  public toggleCartVisibility(): void {
-    this.isCartOpen = !this.isCartOpen
-  }
-
-  public closeMenuCart(): void {
-    setTimeout(() => {
-      this.isCartOpen = false;
-    }, 1000);
-  }
+  ) {  }
 
 }

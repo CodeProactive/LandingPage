@@ -1,5 +1,4 @@
-<div class="gog-header"
-     (mouseleave)="closeMenuCart()">
+<div class="gog-header">
   <div class="gog-header__menu-wrapper">
     <div class="gog-header__logo-container">
       <div class="gog-header__logo">
@@ -11,7 +10,7 @@
       <div class="gog-header__cart">
         <a class="gog-header__cart-button"
            target="_self"
-           (click)="toggleCartVisibility()">
+           (click)="this.isCartOpen = !this.isCartOpen">
           <div class="gog-header__cart-icon">
             <img alt="Cart icon"
                  src="assets/icons/icon_cart.svg">
