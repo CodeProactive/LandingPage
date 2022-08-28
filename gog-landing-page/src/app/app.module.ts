@@ -8,12 +8,12 @@ import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import {GogCartSummaryComponent} from "./modules/header/cart/cart-summary/gog-cart-summary.component";
 import {GogCartItemComponent} from "./modules/header/cart/cart-item/gog-cart-item.component";
 import {GogBodyComponent} from "./modules/body/gog-body.component";
-import {GogCarouselComponent} from "./modules/body/carousel/gog-carousel.component";
 import {GogProductListComponent} from "./modules/body/product-list/gog-product-list.component";
 import {
   GogProductListItemComponent
 } from "./modules/body/product-list/product-list-item/gog-product-list-item.component";
 import {GogCartService} from "./modules/header/cart/gog-cart.service";
+import {GogCarouselComponent} from "./modules/body/carousel/gog-carousel.component";
 
 @NgModule({
   declarations: [

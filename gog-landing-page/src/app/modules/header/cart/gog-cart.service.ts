@@ -30,4 +30,8 @@ export class GogCartService {
     });
   }
 
+  public isProductInCart(productId: number): boolean {
+   return this.productsInCart.some(product => product.productId === productId) ? true : false;
+  }
+
 }

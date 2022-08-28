@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CopyEng } from '../../common/copy/copy-eng';
 import { GogCartService } from "./gog-cart.service";
 
 @Component({
@@ -7,6 +8,7 @@ import { GogCartService } from "./gog-cart.service";
   styleUrls: ['./gog-cart-menu.component.scss'],
 })
 export class GogCartMenuComponent {
+  public COPY_ENG: typeof CopyEng = CopyEng;
 
   constructor(
     public gogCartService: GogCartService

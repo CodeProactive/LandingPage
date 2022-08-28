@@ -9,7 +9,14 @@
   <div class="gog-product-list-item__price">
     <button type="button"
             (click)="gogCartService.addProductToCart(salesProduct)">
-      <span *ngIf="salesProduct.currency === CurrenciesEnum.USD">$</span>{{ salesProduct.productPrice }}
+      <ng-container *ngIf="!gogCartService.isProductInCart(salesProduct.productId); else productInCart">
+        <span *ngIf="salesProduct.currency === CurrenciesEnum.USD">{{COPY_ENG.COMMON.CURRENCIES.USD}}</span>{{ salesProduct.productPrice }}
+      </ng-container>
+      <ng-template #productInCart>
+        <span>
+          {{COPY_ENG.BODY.PRODUCTS_SECTION.PRODUCT_IN_CART}}
+        </span>
+      </ng-template>
     </button>
   </div>
 </div>

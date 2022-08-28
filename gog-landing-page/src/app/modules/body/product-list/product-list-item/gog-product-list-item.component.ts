@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { ProductModel } from "../../../common/models/product.model";
 import { CurrenciesEnum } from "../../../common/models/currencies.enum";
-import {GogCartService} from "../../../header/cart/gog-cart.service";
+import { GogCartService } from "../../../header/cart/gog-cart.service";
+import { CopyEng } from "../../../common/copy/copy-eng";
 
 @Component({
   selector: 'gog-product-list-item',
@@ -12,6 +13,7 @@ import {GogCartService} from "../../../header/cart/gog-cart.service";
 export class GogProductListItemComponent {
   @Input() public salesProduct: ProductModel;
   public CurrenciesEnum: typeof CurrenciesEnum = CurrenciesEnum;
+  public COPY_ENG: typeof CopyEng = CopyEng;
 
   constructor(
     public gogCartService: GogCartService

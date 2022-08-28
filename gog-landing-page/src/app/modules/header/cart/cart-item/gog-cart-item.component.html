@@ -12,13 +12,17 @@
          *ngIf="isRemoveButtonVisible === true">
       <a target="_self"
          (click)="gogCartService.removeItemFromCart(cartItem.productName)">
-        Remove
+        {{COPY_ENG.HEADER.CART.REMOVE_ITEM}}
       </a>
     </div>
   </div>
   <div class="gog-cart-item__product-price">
-    <span *ngIf="cartItem.currency === CurrenciesEnum.USD">$</span>
-    <span *ngIf="cartItem.currency === CurrenciesEnum.PLN">PLN</span>
+    <span *ngIf="cartItem.currency === CurrenciesEnum.USD">
+      {{COPY_ENG.COMMON.CURRENCIES.USD}}
+    </span>
+    <span *ngIf="cartItem.currency === CurrenciesEnum.PLN">
+      {{COPY_ENG.COMMON.CURRENCIES.PLN}}
+    </span>
     {{ cartItem.productPrice }}
   </div>
 </div>

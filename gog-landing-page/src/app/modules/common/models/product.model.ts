@@ -1,6 +1,7 @@
 import { CurrenciesEnum } from "./currencies.enum";
 
 export class ProductModel {
+  productId: number;
   productName: string;
   productPrice: number;
   currency: CurrenciesEnum;
